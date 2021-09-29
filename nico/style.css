@@ -36,8 +36,7 @@ body {
   content: '';
   display: block;
   height: 433px;
-  /*background: url(https://i.imgur.com/wv17Wxa.jpg) no-repeat;*/
-  background: url("assets/banner.png") no-repeat;
+  background: url(https://i.imgur.com/wv17Wxa.jpg) no-repeat;
   background-size: cover;
   margin: -15px;
   margin-bottom: 10px;
