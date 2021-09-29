@@ -1,0 +1,181 @@
+body {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0) 200px), url(https://i.imgur.com/Ubehx3a.png);
+}
+
+.l-top_menu-v2, .l-top_menu-v2 .menu-dropdown>span {
+  background: rgba(0,0,0,0);
+}
+
+.l-top_menu-v2 .global-search input::placeholder, .l-top_menu-v2 .global-search .search-marker, .l-top_menu-v2 .global-search .hotkey-marker { color: #FFFA; }
+.l-top_menu-v2 .global-search .hotkey-marker { border-color: #FFFA; }
+.l-top_menu-v2.is-search-focus .global-search .search-marker {
+  color: #FFFC;
+}
+
+.l-top_menu-v2 .logo-container .glyph {
+ background-image: url(https://i.imgur.com/jVe25fz.png);
+}
+.l-top_menu-v2 .global-search input {
+  background-color: rgba(255,255,255,0.2);
+  -background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(4px);
+}
+
+#profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > div > span:nth-child(1) {
+  font-size: 0px;
+}
+#profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > div > span:nth-child(1):before {
+  font-size: 13px;
+  content: 'лицо мужского пола';
+}
+#profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > div > span:nth-child(1):after {
+  font-size: 13px;
+}
+
+/*баннер*/
+.p-profiles-show .profile-head:before {
+  content: '';
+  display: block;
+  height: 433px;
+  background: url(https://i.imgur.com/qz4yUKT.png) no-repeat;
+  background-size: cover;
+  margin: -15px;
+  margin-bottom: 10px;
+  border-radius: 12px 12px 0px 0px;
+}
+/*------------------------------------------------------------------*/
+
+/*цвета*/
+html[data-color-mode=light] {
+  /*оверрайды*/
+  --link-color: #941856;
+  --link-color: #000000;
+  --link-hover-color: #de0270;
+  --headline-background-color: #f0e9ec;
+  --headline-border-color: #e3d8dd;
+  /*новые переменные*/
+  --shiki-color: #645;
+  --shiki-color-hover: #b81d6a;
+  --shiki-color-active: #85154d;
+}
+/*------------------------------------------------------------------*/
+
+/*кастомная сводка*/
+/*дата регистрации на 2009*/
+.b-tooltipped.dotted.mobile { font-size: 0px; }
+.b-tooltipped.dotted.mobile:before { font-size: 13px; content: "2009 г."; }
+.tipsy.tipsy-w .tipsy-inner { font-size: 0px; }
+.tipsy.tipsy-w .tipsy-inner:before { content: "9 сентября 2009 г."; font-size: 11px; }
+
+/**/
+#profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > h1 {
+  content: 'flowo';
+}
+/*------------------------------------------------------------------*/
+
+/*база*/
+.l-page {
+  overflow: auto;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  border-radius: 12px 12px 12px 12px;
+  /*padding: 15px 25px 0px 25px;*/
+  background-color: rgba(255,255,255,0.85);
+  box-shadow: 0 0 100px 0 rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/*убираем кнопку фидбека, число комментариев*/
+.b-feedback, .c-additionals {
+  visibility: hidden;
+} 
+
+/*ава*/
+.p-profiles .profile-head .c-brief .avatar img {
+  background-image: url(https://i.imgur.com/3NTihVL.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5%;
+  box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.2);
+} 
+/*меняем аватарку на заглушку (1x1 px rgba0000)*/
+img[title="fl0w"] {
+  content: url(https://i.imgur.com/HCLMdvY.png);
+}
+/*фиксим отсутствие аватарки на главной панели*/
+.l-top_menu-v2 .menu-dropdown.profile>span img {
+  background-image: url(https://i.imgur.com/3NTihVL.png);
+  background-size: cover;
+  background-position: center;
+}
+/*------------------------------------------------------------------*/
+
+
+.headline, .midheadline, .subheadline {
+  border-left: 3px solid var(--headline-border-color);
+}
+
+/*аниме бары*/
+.b-stats_bar .bar {
+  height: auto;
+  border-radius: 6px;
+}
+
+.b-stats_bar.anime .bar .first, .b-stats_bar.anime .bar .second, .b-stats_bar.anime .bar .third, .b-stats_bar.manga .bar .second {
+  background-image: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
+  height: 18px;
+  line-height: 18px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 12px 0px rgba(255,255,255,1);
+}
+
+.b-stats_bar.anime .bar .first {
+  background-color: #E63946;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.b-stats_bar.anime .bar .second {
+  background-color: #e5737c;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.b-stats_bar.anime .bar .third {
+  background-color: #000000;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.b-stats_bar.manga .bar .second {
+  background-color: #457B9D;
+  border-radius: 6px;
+}
+
+
+
+/*редактор текста*/
+.menubar[data-v-898f1eda] { background: rgba(0,0,0,0); }
+
+.menubar .icons[data-v-898f1eda], .icon[data-v-dcc6b890]:not(.is-disabled) { color: var(--shiki-color); }
+
+.b-form input[type=submit] { background-color: var(--shiki-color); }
+
+.b-form input[type=submit]:hover { background-color: var(--shiki-color-hover); }
+
+.b-form input[type=submit]:active { background-color: var(--shiki-color-active); }
+
+.ProseMirror { background: rgba(0,0,0,0); }
+.ProseMirror.ProseMirror-focused {
+  transition: background-color 0.3s ease;
+  border-color: #cc2b7b;
+}
+.ProseMirror.ProseMirror-focused:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+/*------------------------------------------------------------------*/
+
+/*ссылки*/
+.l-footer .links a:hover {
+  text-decoration-style: dashed;
+}
