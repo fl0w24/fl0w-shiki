@@ -17,7 +17,6 @@ body {
 }
 .l-top_menu-v2 .global-search input {
   background-color: rgba(255,255,255,0.2);
-  -background-color: rgba(0,0,0,0.2);
   backdrop-filter: blur(4px);
 }
 
@@ -37,7 +36,8 @@ body {
   content: '';
   display: block;
   height: 433px;
-  background: url(https://i.imgur.com/qz4yUKT.png) no-repeat;
+  /*background: url(https://i.imgur.com/wv17Wxa.jpg) no-repeat;*/
+  background: url("assets/banner.png") no-repeat;
   background-size: cover;
   margin: -15px;
   margin-bottom: 10px;
