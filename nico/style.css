@@ -51,12 +51,14 @@ html[data-color-mode=light] {
   background-position: center;
   border-radius: 5%;
   box-shadow: 0px 5px 6px 1px rgba(0,0,0,0.2);
-  transition-property: background-image;
+  transition-property: background-image, box-shadow;
+  transition-timing-function: ease, ease;
   transition-duration: 0.5s;
 } 
 
 .p-profiles .profile-head .c-brief .avatar img:hover {
   background-image: url(https://i.imgur.com/GOZ2yDp.png);
+  box-shadow: 0px 0px 6px -7px rgba(0,0,0,1);
 }
 /*меняем аватарку на заглушку (1x1 px rgba0000)*/
 img[title="fl0w"] {
