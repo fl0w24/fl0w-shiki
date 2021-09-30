@@ -73,14 +73,33 @@ img[title="fl0w"] {
 
 /*кастомная сводка*/
 /*дата регистрации на 2009*/
-.b-tooltipped.dotted.mobile { font-size: 0px; }
-.b-tooltipped.dotted.mobile:before { font-size: 13px; content: "2009 г."; }
-.tipsy.tipsy-w .tipsy-inner { font-size: 0px; }
-.tipsy.tipsy-w .tipsy-inner:before { content: "9 сентября 2009 г."; font-size: 11px; }
+#profiles_show .b-tooltipped.dotted.mobile { font-size: 0px; }
+#profiles_show .b-tooltipped.dotted.mobile:before { font-size: 13px; content: "2009 г."; }
+#profiles_show .tipsy.tipsy-w .tipsy-inner { font-size: 0px; }
+#profiles_show .tipsy.tipsy-w .tipsy-inner:before { content: "9 сентября 2009 г."; font-size: 11px; }
 /*пол*/
 #profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > div > span:nth-child(1) { font-size: 0px; }
 #profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > div > span:nth-child(1):before { font-size: 13px; content: 'лицо мужского пола'; }
 #profiles_show > section > div:nth-child(1) > div.profile-head > div.c-brief > header > div > span:nth-child(1):after { font-size: 13px; }
+
+.p-profiles .profile-head .c-brief header .notice a:hover {
+  color: inherit;
+}
+.website {
+  font-size: 0px;
+  
+}
+.website:after {
+  content: "tealover#5555";
+  font-size: 13px;
+  /*color: var(--nico-aqua);*/
+  text-decoration-color: var(--nico-aqua);
+  text-shadow: -1px 1px 3px var(--nico-aqua);
+}
+.website:hover:after {
+  text-decoration: none;
+}
+
 /*убираем кнопку фидбека, число комментариев*/
 .b-feedback, .c-additionals { visibility: hidden; } 
 /*------------------------------------------------------------------*/
@@ -126,7 +145,19 @@ img[title="fl0w"] {
 .b-stats_bar.manga .bar .second {
   background-color: #87ecc8; }
 .b-stats_bar.manga .bar .third {
-  background-color: #9eecd1; }
+  background-color: #888888; }
+/*бесполезная галочка у счетчика комлпита*/
+.b-stats_bar.anime .bar .first:before, .b-stats_bar.manga .bar .first:before {
+  font-family: shikimori;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  text-transform: none;
+  letter-spacing: normal;
+  content: "✓";
+  margin-right: 4px;
+}
 /*------------------------------------------------------------------*/
 
 /*редактор текста*/
@@ -182,5 +213,90 @@ img[title="fl0w"] {
 .bar.simple .bar.s3, .bar.simple .bar.s3:hover {
   background-color: #ecb6c9;
 }
+/*------------------------------------------------------------------*/
 
+.tooltip {
+  /*padding: 40px 0 0 0px;*/
+}
+
+.tooltip-inner {
+  border: none;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.5);
+}
+
+.dropshadow-top, .dropshadow-top-right, .dropshadow-top-left, .dropshadow-bottom, .dropshadow-bottom-right, .dropshadow-bottom-left, .dropshadow-right, .dropshadow-left {
+  background-image: url();
+}
+
+.tooltip-arrow {
+  visibility: hidden;
+}
+
+.p-profiles .profile-head .c-history .entry:before {
+  content: '';
+  background-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.2) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: right;
+
+  transition-property: background-size;
+  transition-duration: 0.5s;
+}
+
+.p-profiles .profile-head .c-history .entry:before:hover {
+  background-size: 66% 100%;
+}
+
+/*
+.nico {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: bottom right;
+  z-index: 10;
+}
+.nico:after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 300px;
+  float: right;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  background-image: url(https://i.imgur.com/Ocl11yE.png);
+} */
+
+/*
+.cirno {
+  content: '';
+  border: 1px solid black;
+  color: transparent;
+} */
+
+/*фикс постеров разного размера*/
+.b-catalog_entry .cover .image-cutter {
+  max-width: none !important;
+  max-height: none !important;
+}
+.b-catalog_entry .cover .image-cutter::before {
+  content: '';
+  display: block;
+  padding-bottom: 155.5555%;
+}
+.b-catalog_entry .cover .image-cutter img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 3px;
+}
 /*------------------------------------------------------------------*/
