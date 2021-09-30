@@ -10,11 +10,12 @@ html[data-color-mode=light] {
   /*оверрайды*/
   --link-color: #941856;
   --link-color: #000000;
-  --link-hover-color: #de0270;
+  --link-hover-color: #ec6f9b; /*#de0270;*/
   --headline-background-color: #f0e9ec;
   --headline-border-color: #e3d8dd;
   /*новые переменные*/
   --nico-pink: #ec6f9b;
+  --nico-aqua: #6FECC0;
   --shiki-color: #645;
   --shiki-color-hover: #b81d6a;
   --shiki-color-active: #85154d; 
@@ -55,10 +56,10 @@ html[data-color-mode=light] {
   transition-timing-function: ease, ease;
   transition-duration: 0.5s;
 } 
-
+/*анимации на ховер*/
 .p-profiles .profile-head .c-brief .avatar img:hover {
   background-image: url(https://i.imgur.com/GOZ2yDp.png);
-  box-shadow: 0px 0px 6px -7px rgba(0,0,0,1);
+  box-shadow: 0px 0px 6px -7px rgba(0,0,0,0.8);
 }
 /*меняем аватарку на заглушку (1x1 px rgba0000)*/
 img[title="fl0w"] {
@@ -111,20 +112,21 @@ img[title="fl0w"] {
   background-image: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
   height: 18px;
   line-height: 18px;
-  font-size: 15px;
+  font-size: 11px;
+  text-shadow: -1px 1px 2px rgba(0,0,0,0.66);
   box-shadow: inset 0px 0px 6px 0px rgb(255 255 255 / 30%); }
 .b-stats_bar.anime .bar .first {
-  background-color: #E63946;
-  border-radius: 6px 0px 0px 6px; }
+  background-color: var(--nico-pink); }
 .b-stats_bar.anime .bar .second {
-  background-color: #e5737c;
-  border-radius: 0px 0px 0px 0px; }
+  background-color: #fe7fab; }
 .b-stats_bar.anime .bar .third {
-  background-color: #000000;
-  border-radius: 0px 6px 6px 0px; }
+  background-color: #888888; }
+.b-stats_bar.manga .bar .first {
+  background-color: var(--nico-aqua); }
 .b-stats_bar.manga .bar .second {
-  background-color: #457B9D;
-  border-radius: 6px; }
+  background-color: #87ecc8; }
+.b-stats_bar.manga .bar .third {
+  background-color: #9eecd1; }
 /*------------------------------------------------------------------*/
 
 /*редактор текста*/
@@ -150,21 +152,35 @@ img[title="fl0w"] {
 /*------------------------------------------------------------------*/
 
 /*калечим бары времени*/
+
+/*от крупных к мелким*/
 .bar.simple .bar {
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent 140px);
   border-radius: 3px 3px 0px 0px;
 }
-/*от крупных к мелким*/
-.bar.simple .bar.s0 {
+.bar.simple .bar.s0, .bar.simple .bar.s1, .bar.simple .bar.s2, .bar.simple .bar.s3 {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent 140px);
+  box-shadow: inset -6px 6px 4px -4px rgb(255,255,255,0), inset 6px -6px 4px -4px rgb(0,0,0,0);
+  filter: brightness(1.0);
+  transition-property: box-shadow;
+  transition-duration: 3s;
+}
+.bar.simple .bar.s0:hover, .bar.simple .bar.s1:hover, .bar.simple .bar.s2:hover, .bar.simple .bar.s3:hover {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent 140px);
+  box-shadow: inset -6px 6px 4px -4px rgba(255,255,255,0.5), inset 6px -6px 4px -4px rgb(0,0,0,0.5);
+  transition-duration: 0.2s;
+}
+
+.bar.simple .bar.s0, .bar.simple .bar.s0:hover {
   background-color: var(--nico-pink);
 }
-.bar.simple .bar.s1 {
+.bar.simple .bar.s1, .bar.simple .bar.s1:hover {
   background-color: #ec87aa;
 }
-.bar.simple .bar.s2 {
+.bar.simple .bar.s2, .bar.simple .bar.s2:hover {
   background-color: #ec9eba;
 }
-.bar.simple .bar.s3 {
+.bar.simple .bar.s3, .bar.simple .bar.s3:hover {
   background-color: #ecb6c9;
 }
+
 /*------------------------------------------------------------------*/
