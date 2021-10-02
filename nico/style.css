@@ -1,8 +1,19 @@
-/**/
+/*v1.3*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+:root {
+    --font-main: Fira Sans;
+    --font-alt: var(--font-main);
+}
+
+/*font weights*/
+.b-stats_bar .title, .p-profiles .profile-head .c-history .entry .title, .p-profiles-show .profile-content .activity .title, .p-profiles-show .achievements .header .title, .b-comment>.inner .name-date .name { font-weight: 500; }
+.subheadline { font-weight: 600; }
+
 /*фоновое изображение + градиент*/
 body {
     background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0) 200px), url(https://i.imgur.com/WWleZsG.png);
-    background-size: auto, 800px auto;
+    background-size: auto, 800px auto;  
 }
 
 /*цвета*/
@@ -19,8 +30,19 @@ html[data-color-mode=light] {
   --shiki-color: #645;
   --shiki-color-hover: #b81d6a;
   --shiki-color-active: #85154d; 
+  /*test*/
+  --i-banner: url(https://i.imgur.com/lLbT9cy.png);
+  --i-banner-glow: url(https://i.imgur.com/o9F5K5Q.png);
 }
 /*------------------------------------------------------------------*/
+
+/*temp*/
+.b-mention s {
+    color: var(--link-color);
+}
+.b-stats_bar .title, .p-profiles-show .profile-content .activity .title {
+    color: var(--link-color);
+}
 
 /*верхняя панель*/
 .l-top_menu-v2 .logo-container .glyph { background-image: url(https://i.imgur.com/jVe25fz.png); }
@@ -36,12 +58,24 @@ html[data-color-mode=light] {
 .p-profiles-show .profile-head:before {
   content: '';
   display: block;
-  height: 433px;
-  background: url(https://i.imgur.com/qz4yUKT.png) no-repeat;
+  height: 450px;
+  background: var(--i-banner) no-repeat;
   background-size: cover;
   margin: -15px;
   margin-bottom: 10px;
   border-radius: 12px 12px 0px 0px;
+}
+.p-profiles-show .profile-head:after {
+  content: "";
+  background-image: url(https://i.imgur.com/o9F5K5Q.png);
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+  width: 1200px;
+  height: 10px;
+  margin-left: -15px;
+  position: absolute;
+  top: 450px;
+  opacity: 50%;
 }
 /*------------------------------------------------------------------*/
 
@@ -126,14 +160,16 @@ img[title="fl0w"] {
 /*бары комплита*/
 .b-stats_bar .bar {
   height: auto;
-  border-radius: 6px; }
+  border-radius: 3px; }
 .b-stats_bar.anime .bar .first, .b-stats_bar.anime .bar .second, .b-stats_bar.anime .bar .third, .b-stats_bar.manga .bar .first, .b-stats_bar.manga .bar .second, .b-stats_bar.manga .bar .third {
-  background-image: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 20%, rgba(0,0,0,0.3) 80%);
   height: 18px;
   line-height: 18px;
   font-size: 11px;
   text-shadow: -1px 1px 2px rgba(0,0,0,0.66);
-  box-shadow: inset 0px 0px 6px 0px rgb(255 255 255 / 30%); }
+  box-shadow: inset 0px 0px 6px 0px rgb(255 255 255 / 30%);
+  filter: saturate(1.25);
+}
 .b-stats_bar.anime .bar .first {
   background-color: var(--nico-pink); }
 .b-stats_bar.anime .bar .second {
@@ -250,34 +286,6 @@ img[title="fl0w"] {
 .p-profiles .profile-head .c-history .entry:before:hover {
   background-size: 66% 100%;
 }
-
-/*
-.nico {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform-origin: bottom right;
-  z-index: 10;
-}
-.nico:after {
-  content: '';
-  display: block;
-  width: 300px;
-  height: 300px;
-  float: right;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: contain;
-  background-image: url(https://i.imgur.com/Ocl11yE.png);
-} */
-
-/*
-.cirno {
-  content: '';
-  border: 1px solid black;
-  color: transparent;
-} */
 
 /*фикс постеров разного размера*/
 .b-catalog_entry .cover .image-cutter {
